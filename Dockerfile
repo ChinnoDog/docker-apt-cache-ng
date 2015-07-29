@@ -35,3 +35,6 @@ CMD [ \
 # LogDir: /directory/for/logfiles
 
 EXPOSE 3142
+
+# Enable centos 7 caching
+RUN echo "VfilePatternEx: \?((release=.*|arch=.*|repo=.*)&?)+|\/repodata\/.*xml" >>/etc/apt-cacher-ng/acng.conf
