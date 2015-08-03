@@ -38,3 +38,4 @@ EXPOSE 3142
 
 # Enable centos 7 caching
 RUN echo "VfilePatternEx: \?((release=.*|arch=.*|repo=.*)&?)+|\/repodata\/.*xml" >>/etc/apt-cacher-ng/acng.conf
+RUN echo "PfilePatternEX: \/RPM-GPG-KEY\/" >>/etc/apt-cacher-ng/acng.conf
